@@ -6,7 +6,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: be0abaac209db7df3c826fc0612a1fc905df3306
+      resolved-ref: "6e16ad8f0c4158f81faaf79a015b098a87e7aac7"
       url: "https://github.com/majiar15/pragma-fase3.git"
     source: git
     version: "0.0.1"
@@ -87,6 +87,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.3"
+  flutter_models_commons:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: dd56774724c8789c81ca76dc28dfeaa9da022f3d
+      url: "https://github.com/majiar15/pragma-commons-models.git"
+    source: git
+    version: "0.0.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -177,12 +186,12 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.11.0"
-  store_desing_system:
+  store_design_system:
     dependency: "direct main"
     description:
       path: "."
       ref: main
-      resolved-ref: b4b649883357a96eb3b92b09028d137cc8622ff9
+      resolved-ref: eb31328fcf234b6e0c5ed57bb4e87ace9464690e
       url: "https://github.com/majiar15/pragama-fase4.git"
     source: git
     version: "0.0.1"

@@ -4,9 +4,9 @@ import 'package:fase5/main.dart';
 import 'package:fase5/presentation/bloc/auth_bloc.dart';
 
 import 'package:flutter/material.dart';
-import 'package:store_desing_system/templates/login_template.dart';
-import 'package:store_desing_system/foundation/colors_foundation.dart';
-import 'package:store_desing_system/atoms/dialog_atom.dart';
+import 'package:store_design_system/templates/login_template.dart';
+import 'package:store_design_system/foundation/colors_foundation.dart';
+import 'package:store_design_system/atoms/dialog_atom.dart';
 
 import 'package:fase5/presentation/routes/routes.dart';
 

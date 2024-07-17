@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:store_desing_system/templates/create_account_template.dart';
+import 'package:store_design_system/templates/create_account_template.dart';
 
 
 class RegisterPage extends StatelessWidget {
