@@ -32,6 +32,15 @@ class CartBloc {
     }
   }
 
+  void cleanCart() {
+    try {
+       final cart = _cartUseCases.cleanCart();
+       loadCart();
+    } catch (e) {
+       _cartController.addError(e);
+    }
+  }
+
   void dispose() {
     _cartController.close();
   }

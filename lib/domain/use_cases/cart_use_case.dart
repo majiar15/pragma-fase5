@@ -13,4 +13,6 @@ class CartUseCase {
 
   List<ProductCartUIModel> addItem(ProductCartUIModel product) =>
       _cartRepository.addItem(product);
+  List<ProductCartUIModel> cleanCart() =>
+      _cartRepository.cleanCart();
 }

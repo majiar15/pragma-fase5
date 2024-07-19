@@ -72,6 +72,8 @@ class _CartPageState extends State<CartPage> {
                       content: "se ha tomado su pedido exitosamente",
                       rightButtonText: "Cerrar",
                       onRightButtonPressed: () {
+                        cartBloc.cleanCart();
+                        Navigator.pop(context);
                         Navigator.pop(context);
                       }).show(context)
                 }

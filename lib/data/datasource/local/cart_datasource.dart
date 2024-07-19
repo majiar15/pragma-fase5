@@ -44,4 +44,10 @@ class CartDataSource extends CartRepository {
   List<ProductCartUIModel> getCart() {
     return cart;
   }
+
+  @override
+  List<ProductCartUIModel> cleanCart() {
+    cart.clear();
+    return cart;
+  }
 }

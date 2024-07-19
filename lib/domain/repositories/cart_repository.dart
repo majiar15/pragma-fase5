@@ -6,5 +6,6 @@ abstract class CartRepository {
   List<ProductCartUIModel> getCart();
   List<ProductCartUIModel> addItem(ProductCartUIModel product);
   List<ProductCartUIModel> removeItem(ProductCartUIModel product);
+  List<ProductCartUIModel> cleanCart();
 
 }
