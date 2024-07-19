@@ -1,16 +1,44 @@
-# fase5
+# reto pragma fase5
 
-A new Flutter project.
+## arquitectura
 
-## Getting Started
+este reto fue realizado utilizando clean architecture, fue realizado utilizando la metodología DDD (domain-diven-desing), esta app utiliza los paquetes store_design_system y api_fake_storage_orm
 
-This project is a starting point for a Flutter application.
+estructura:
+- data
+    - datasource -> aqui se guardan todos los datos locales y remotos de la app
+- domain
+    - models -> en esta capa se tiene los modelos de datos utilizados en la app
+    - repositories -> esta es una capa de de abstracción que permite a domain conocer cuales son los métodos del repositorio
+    - use_cases -> esta capa contiene lógica de negocios, puede llamar al repository para realizar acciones con los datos
+- presentation
+    - bloc -> esta capa que se comunica con el dominio y conviene los datos en streams para su consumo en los widgets
+    - pages -> en esta capa las vistas de la aplicacion
+    - routes -> esta capa contiene la información necesaria para la navegación
 
-A few resources to get you started if this is your first Flutter project:
+## Instalación 🔧
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### _1. clone el repositorio_
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+git clone https://github.com/majiar15/pragma-fase5
+```
+
+### _2. instale los paquetes_
+
+```
+flutter pub get
+```
+
+### _3. encendemos la aplicacion_
+
+```
+flutter run
+```
+
+### _4. pruebe la app_
+
+```
+flutter run
+```
+
