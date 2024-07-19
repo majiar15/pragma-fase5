@@ -5,5 +5,6 @@ class Routes {
   static const forgotPassword = '/forgot-password';
   static const register = '/register';
   static const productDetail = '/product-details';
-  static const catalog = '/catalog';
+  static const cart = '/cart';
+  static const offer = '/offer-products';
 }

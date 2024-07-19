@@ -11,7 +11,7 @@ class HomeBloc {
   final _allProductsController = StreamController<List<ProductModel>>();
   final _categoryController = StreamController<List<String>>();
 
-  Stream<List<ProductModel>> get productsStream => _allProductsController.stream.asBroadcastStream();
+  Stream<List<ProductModel>> get productsStream => _allProductsController.stream;
   Stream<List<String>> get categoryStream => _categoryController.stream;
 
   HomeBloc(

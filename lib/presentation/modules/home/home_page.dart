@@ -1,14 +1,20 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:fase5/presentation/bloc/home_bloc.dart';
+import 'package:fase5/presentation/modules/suport_contact/support_contact_page.dart';
 import 'package:fase5/presentation/routes/routes.dart';
+import 'package:fase5/presentation/modules/catalog/catalog_page.dart';
 import 'package:flutter/material.dart';
 import 'package:fase5/main.dart';
 import 'package:flutter_models_commons/flutter_models_commons.dart';
-import 'package:store_design_system/store_design_system.dart';
+import 'package:store_design_system/atoms.dart';
+import 'package:store_design_system/molecules.dart';
+import 'package:store_design_system/templates.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final String name;
+  const HomePage({super.key, required this.name});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -17,11 +23,41 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
-  StreamSubscription? _subscriptionProduct;
-  StreamSubscription? _subscriptionCategories;
+  late StreamSubscription _subscriptionProduct;
+  late StreamSubscription _subscriptionCategories;
 
-  List<ProductModel> productList = [];
+  List<DiscountedProduct> productList = [];
+  List<DiscountedProduct> productsDiscountList = [];
   List<String> categoryList = [];
+
+  List<DiscountedProduct> addDiscount(List<ProductModel> products) {
+    List<DiscountedProduct> productDiscounted = [];
+    List<int> selectIndex = [];
+    Random random = Random();
+    for (int i = 0; i < 10; i++) {
+      int randomIndex = random.nextInt(products.length - 1);
+      if(!selectIndex.contains(randomIndex)){
+        selectIndex.add(randomIndex);
+      }
+    }
+
+    for (var i = 0; i < products.length; i++) {
+      if (selectIndex.contains(i)) {
+        int randomDiscount = random.nextInt(60);
+        productDiscounted.add(
+          DiscountedProduct.fromProductModel(products[i], randomDiscount)
+        );
+        productsDiscountList.add(
+          DiscountedProduct.fromProductModel(products[i], randomDiscount)
+        );
+        continue;
+      }
+      productDiscounted.add(
+        DiscountedProduct.fromProductModel(products[i], 0)
+      );
+    }
+    return productDiscounted;
+  }
 
   _init() async {
     final HomeBloc homeBloc = Injector.of(context).homeBloc;
@@ -30,8 +66,9 @@ class _HomePageState extends State<HomePage> {
 
     _subscriptionProduct = homeBloc.productsStream.listen(
       (products) {
+        final productsDiscounted = addDiscount(products);
         setState(() {
-          productList = products;
+          productList = productsDiscounted;
         });
       },
       onError: (error) {},
@@ -49,8 +86,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void dispose() {
-    _subscriptionProduct!.cancel();
-    _subscriptionCategories!.cancel();
+    _subscriptionProduct.cancel();
+    _subscriptionCategories.cancel();
 
     final HomeBloc homeBloc = Injector.of(context).homeBloc;
     homeBloc.dispose();
@@ -83,10 +120,12 @@ class _HomePageState extends State<HomePage> {
 
     return SafeArea(
       child: Scaffold(
-        appBar: AppBarBarMolecule(
+        appBar: AppBarMolecule(
           actions: [
             IconButton(
-                onPressed: onTapCart, icon: const Icon(Icons.shopping_cart))
+              onPressed: () => {Navigator.pushNamed(context, Routes.cart)},
+              icon: const Icon(Icons.shopping_cart),
+            )
           ],
         ),
         body: IndexedStack(
@@ -94,13 +133,20 @@ class _HomePageState extends State<HomePage> {
           children: [
             productList.isNotEmpty
                 ? HomeTemplate(
-                    onTapLogin: () => {print("login")},
-                    onTapSignUp: () => {print("sigup")},
-                    onChangePasswordText: (text) => {print("change passs")},
-                    onChangeUserText: (text) => {print("change user")},
-                    onTapCategory: (String) {},
+                    name: widget.name,
                     productList: productList,
-                    onTapTrendingProducts: () {},
+                    onTapTrendingProducts: () {
+                      Navigator.pushNamed(
+                        context,
+                        Routes.offer,
+                        arguments: {
+                          'products': productsDiscountList,
+                          'productsSimilar':productList,
+                          'onTapProductSimilar': (ProductModel product) {},
+                          'onTapAddCart': (ProductModel product) {},
+                        },
+                      );
+                    },
                     onTapCard: (product) {
                       final productSimilar = productList
                           .where(
@@ -112,6 +158,7 @@ class _HomePageState extends State<HomePage> {
                         arguments: {
                           'product': product,
                           'productsSimilar': productSimilar,
+                          'discountPercentage': product?.discountPercentage ?? 0,
                           'onTapProductSimilar': (ProductModel product) {},
                           'onTapAddCart': (ProductModel product) {},
                         },
@@ -120,8 +167,8 @@ class _HomePageState extends State<HomePage> {
                   )
                 : const Center(child: CircularProgressIndicator()),
             productList.isNotEmpty
-                ? CatalogTemplate(
-                    productList: productList,
+                ? CatalogPage(
+                    productsSimilar: productList,
                     categories: categoryList,
                     onTapAddCart: (ProductModel) {},
                     onTapProductSimilar: (product) {
@@ -166,6 +213,4 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-
-  void onTapCart() {}
 }

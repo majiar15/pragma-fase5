@@ -1,3 +1,4 @@
+import 'package:fase5/presentation/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:store_design_system/templates/create_account_template.dart';
 
@@ -13,7 +14,16 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CreateAccountTemplate(
       confirmPasswordController: confirmPasswordController,
-      onTapCreateAccount: () {  },
+      onTapCreateAccount: () {
+        Navigator.pushNamedAndRemoveUntil(
+            context,
+            Routes.home,
+            (route) => false,
+            arguments: {
+              'name': userController.text
+            }
+          );
+      },
       onTapLoginLink: () { Navigator.pop(context); },
       passwordController: passwordController,
       userController: userController,

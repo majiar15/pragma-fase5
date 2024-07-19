@@ -92,7 +92,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: dd56774724c8789c81ca76dc28dfeaa9da022f3d
+      resolved-ref: effbe345817a5bc31f3279eaa6ed6a31e2f93e5f
       url: "https://github.com/majiar15/pragma-commons-models.git"
     source: git
     version: "0.0.1"
@@ -191,7 +191,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: eb31328fcf234b6e0c5ed57bb4e87ace9464690e
+      resolved-ref: "53727f12565694be9aed62d61d41ca9a12064d93"
       url: "https://github.com/majiar15/pragama-fase4.git"
     source: git
     version: "0.0.1"
