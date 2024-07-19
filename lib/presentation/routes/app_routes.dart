@@ -1,11 +1,11 @@
-import 'package:fase5/presentation/modules/cart/cart_page.dart';
-import 'package:fase5/presentation/modules/offer_products/offer_products.dart';
-import 'package:fase5/presentation/modules/register/register_page.dart';
+import 'package:fase5/presentation/pages/cart_page.dart';
+import 'package:fase5/presentation/pages/offer_products.dart';
+import 'package:fase5/presentation/pages/register_page.dart';
 import 'package:flutter/material.dart';
-import 'package:fase5/presentation/modules/login/login_page.dart';
-import 'package:fase5/presentation/modules/product_detail/product_detail.dart';
-import 'package:fase5/presentation/modules/home/home_page.dart';
-import 'package:fase5/presentation/modules/forgot_password/forgot_password_page.dart';
+import 'package:fase5/presentation/pages/login_page.dart';
+import 'package:fase5/presentation/pages/product_detail.dart';
+import 'package:fase5/presentation/pages/home_page.dart';
+import 'package:fase5/presentation/pages/forgot_password_page.dart';
 
 import 'routes.dart';
 

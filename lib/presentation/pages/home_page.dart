@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:fase5/presentation/bloc/home_bloc.dart';
-import 'package:fase5/presentation/modules/suport_contact/support_contact_page.dart';
+import 'package:fase5/presentation/pages/support_contact_page.dart';
 import 'package:fase5/presentation/routes/routes.dart';
-import 'package:fase5/presentation/modules/catalog/catalog_page.dart';
+import 'package:fase5/presentation/pages/catalog_page.dart';
 import 'package:flutter/material.dart';
 import 'package:fase5/main.dart';
 import 'package:flutter_models_commons/flutter_models_commons.dart';

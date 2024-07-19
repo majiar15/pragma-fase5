@@ -16,6 +16,11 @@ estructura:
     - pages -> en esta capa las vistas de la aplicacion
     - routes -> esta capa contiene la información necesaria para la navegación
 
+## Diagrama de flujo
+
+![diagrama de flujo](./assets/images/diagrama%20eccomerce.drawio.png)
+
+
 ## Instalación 🔧
 
 ### _1. clone el repositorio_
