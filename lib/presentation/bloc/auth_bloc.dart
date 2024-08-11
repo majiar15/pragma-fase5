@@ -4,7 +4,7 @@ import 'package:fase5/domain/use_cases/auth_use_case.dart';
 
 class AuthBloc {
   final AuthUseCase _authUseCases;
-  final _authController = StreamController<String>();
+  final _authController = StreamController<String>.broadcast();
 
   Stream<String> get stream => _authController.stream;
 

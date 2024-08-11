@@ -3,13 +3,16 @@ import 'package:fase5/data/datasource/api/auth/auth_api.dart';
 import 'package:fase5/data/datasource/api/category/category_api.dart';
 import 'package:fase5/data/datasource/api/product/product_api.dart';
 import 'package:fase5/data/datasource/local/cart_datasource.dart';
+import 'package:fase5/data/datasource/local/discounted_datasource.dart';
 import 'package:fase5/domain/repositories/auth_repository.dart';
 import 'package:fase5/domain/repositories/cart_repository.dart';
 import 'package:fase5/domain/repositories/category_repository.dart';
+import 'package:fase5/domain/repositories/discount_repository.dart';
 import 'package:fase5/domain/repositories/product_repository.dart';
 import 'package:fase5/domain/use_cases/auth_use_case.dart';
 import 'package:fase5/domain/use_cases/cart_use_case.dart';
 import 'package:fase5/domain/use_cases/category_use_case.dart';
+import 'package:fase5/domain/use_cases/discounted_use_case.dart';
 import 'package:fase5/domain/use_cases/product_use_case.dart';
 import 'package:fase5/presentation/bloc/auth_bloc.dart';
 import 'package:fase5/presentation/bloc/cart_bloc.dart';
@@ -22,6 +25,7 @@ void main(){
   ProductRepository productRepository = ProductApi();
   CategoryRepository categoryRepository = CategoryApi();
   CartRepository cartRepository = CartDataSource();
+  DiscountedRepository discountRepository = DiscountDataSource();
 
   runApp(
     Injector(
@@ -30,7 +34,8 @@ void main(){
       ),
       homeBloc: HomeBloc(
         ProductUseCase(productRepository),
-        CategoryUseCase(categoryRepository)
+        CategoryUseCase(categoryRepository),
+        DiscountedUseCase(discountRepository)
       ),
       cartBloc: CartBloc(
         CartUseCase(cartRepository)

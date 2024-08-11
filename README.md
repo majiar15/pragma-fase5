@@ -1,5 +1,13 @@
 # reto pragma fase5
 
+## Nota: 
+Para acceder a la aplicación, puedes utilizar cualquier usuario disponible en la [FakeStoreAPI](https://fakestoreapi.com/docs#user). A continuación, te proporciono un ejemplo:
+``` json
+"usuario": "mor_2314",
+"contraseña": "83r5^_"
+```
+Ten en cuenta que las funcionalidades de registro de usuario y recuperación de contraseña no están disponibles, ya que la FakeStoreAPI no ofrece estos endpoints.
+
 ## arquitectura
 
 este reto fue realizado utilizando clean architecture, fue realizado utilizando la metodología DDD (domain-diven-desing), esta app utiliza los paquetes store_design_system y api_fake_storage_orm
@@ -18,7 +26,9 @@ estructura:
 
 ## Diagrama de flujo
 
-![diagrama de flujo](./assets/images/diagrama%20eccomerce.drawio.png)
+![diagrama de flujo](./docs/diagrama%20eccomerce.drawio.png)
+
+
 
 
 ## Instalación 🔧

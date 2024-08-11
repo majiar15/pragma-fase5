@@ -1,6 +1,6 @@
 
 import 'package:fase5/domain/repositories/cart_repository.dart';
-import 'package:flutter_models_commons/flutter_models_commons.dart' show ProductCartUIModel, CartUIModel;
+import 'package:flutter_models_commons/flutter_models_commons.dart' show ProductCartUIModel;
 
 class CartDataSource extends CartRepository {
 

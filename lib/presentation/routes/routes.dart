@@ -2,9 +2,11 @@ class Routes {
   Routes._();
   static const login = '/login';
   static const home = '/home';
+  static const layout = '/layout';
   static const forgotPassword = '/forgot-password';
   static const register = '/register';
   static const productDetail = '/product-details';
   static const cart = '/cart';
   static const offer = '/offer-products';
+  static const contact = '/contact';
 }

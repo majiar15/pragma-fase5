@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:fase5/domain/use_cases/cart_use_case.dart';
 import 'package:flutter_models_commons/flutter_models_commons.dart'
-    show ProductCartUIModel, CartUIModel;
+    show ProductCartUIModel;
 
 class CartBloc {
   final CartUseCase _cartUseCases;
@@ -16,7 +16,7 @@ class CartBloc {
 
   void addItem(ProductCartUIModel product) {
     try {
-       final cart = _cartUseCases.addItem(product);
+       _cartUseCases.addItem(product);
        loadCart();
     } catch (e) {
        _cartController.addError(e);
@@ -25,7 +25,7 @@ class CartBloc {
 
   void removeItem(ProductCartUIModel product) {
     try {
-       final cart = _cartUseCases.removeItem(product);
+       _cartUseCases.removeItem(product);
        loadCart();
     } catch (e) {
        _cartController.addError(e);
@@ -34,7 +34,7 @@ class CartBloc {
 
   void cleanCart() {
     try {
-       final cart = _cartUseCases.cleanCart();
+       _cartUseCases.cleanCart();
        loadCart();
     } catch (e) {
        _cartController.addError(e);

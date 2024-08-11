@@ -8,7 +8,14 @@ import 'package:store_design_system/templates/login_template.dart';
 import 'package:store_design_system/atoms/dialog_atom.dart';
 
 import 'package:fase5/presentation/routes/routes.dart';
-
+/// [LoginPage] es una página de inicio de sesión que permite a los usuarios
+/// autenticar sus credenciales y acceder a la aplicación. Maneja la interacción
+/// con el [AuthBloc] para el inicio de sesión y muestra diálogos de error en caso
+/// de credenciales incorrectas.
+///
+/// Esta página incluye campos de texto para el nombre de usuario y la contraseña,
+/// y proporciona navegación a otras páginas, como la de registro y la de recuperación
+/// de contraseña.
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -32,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
         });
         Navigator.pushNamedAndRemoveUntil(
             context,
-            Routes.home,
+            Routes.layout,
             (route) => false,
             arguments: {
               'name': userController.text
@@ -54,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void dispose() {
-    _subscription?.cancel();
+    _subscription!.cancel();
     super.dispose();
   }
 
