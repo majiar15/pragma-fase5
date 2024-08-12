@@ -26,9 +26,9 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   bool isLoading = false;
   TextEditingController userController =
-      TextEditingController(text: "mor_2314");
+      TextEditingController();
   TextEditingController passwordController =
-      TextEditingController(text: "83r5^_");
+      TextEditingController();
   StreamSubscription<String>? _subscription;
   _init() async {
     final AuthBloc authBloc = Injector.of(context).authBloc;
