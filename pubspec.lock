@@ -244,9 +244,11 @@ packages:
   store_design_system:
     dependency: "direct main"
     description:
-      path: "../store_desing_system"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "58d1bf47060be01964f8b679d225dff6a5040807"
+      url: "https://github.com/majiar15/pragama-fase4.git"
+    source: git
     version: "0.0.1"
   stream_channel:
     dependency: transitive
