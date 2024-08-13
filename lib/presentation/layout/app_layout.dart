@@ -65,6 +65,7 @@ class _AppLayoutState extends State<AppLayout> {
         name: widget.name,
         items: [
           DrawerItemMolecule(
+            key: const Key("drawerHomePage"),
             icon: Icons.home,
             label: 'Inicio',
             onTap: () {
@@ -72,6 +73,7 @@ class _AppLayoutState extends State<AppLayout> {
             },
           ),
           DrawerItemMolecule(
+            key: const Key("drawerCatalogPage"),
             icon: Icons.search,
             label: 'Catálogo',
             onTap: () {
@@ -79,6 +81,7 @@ class _AppLayoutState extends State<AppLayout> {
             },
           ),
           DrawerItemMolecule(
+            key: const Key("drawerContactPage"),
             icon: Icons.contact_mail,
             label: 'Contacto',
             onTap: () {

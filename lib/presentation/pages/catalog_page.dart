@@ -38,7 +38,7 @@ class _CatalogPageState extends State<CatalogPage> {
 
   _init() async {
     final HomeBloc homeBloc = Injector.of(context).homeBloc;
-    await Future.delayed(const Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 2));
     homeBloc.getProductDiscount();
     homeBloc.getAllCategories();
 
