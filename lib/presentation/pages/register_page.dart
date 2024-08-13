@@ -22,7 +22,7 @@ class RegisterPage extends StatelessWidget {
       onTapCreateAccount: () {
         Navigator.pushNamedAndRemoveUntil(
             context,
-            Routes.home,
+            Routes.layout,
             (route) => false,
             arguments: {
               'name': userController.text

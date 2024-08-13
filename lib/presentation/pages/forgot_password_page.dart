@@ -26,7 +26,7 @@ class ForgotPasswordPage extends StatelessWidget {
                   onRightButtonPressed: () => {
                       Navigator.pushNamedAndRemoveUntil(
                         context,
-                        Routes.login,
+                        Routes.layout,
                         (Route<dynamic> route) => false,
                       )
                     }
