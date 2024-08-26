@@ -1,0 +1,192 @@
+{
+    "textPages": {
+        "cart": {
+            "appBarTitle": "CARRITO",
+            "emptyCartMessage": "¡Agrega Productos al carrito!",
+            "totalPurchaseLabel": "Total de la Compra: ",
+            "buyButtonLabel": "Realizar Compra",
+            "priceLabel": "Precio",
+            "totalPriceLabel": "Total"
+        },
+        "catalog": {
+            "searchLabel": "Search",
+            "productCountText": "Productos",
+            "filterAllOption": "All"
+        },
+        "createAccount": {
+            "titleLine1": "Crear una",
+            "titleLine2": "cuenta",
+            "usernameLabel": "Usuario",
+            "usernameValidatorEmpty": "Por favor ingrese su nombre de usuario",
+            "passwordLabel": "Contraseña",
+            "passwordValidatorEmpty": "Por favor ingrese una contraseña",
+            "passwordValidatorShort": "La contraseña debe tener al menos 6 caracteres",
+            "confirmPasswordLabel": "Confirmar Contraseña",
+            "confirmPasswordValidatorEmpty": "Por favor confirme su contraseña",
+            "confirmPasswordValidatorMismatch": "Las contraseñas no coinciden",
+            "registerTermsPrefix": "Al hacer clic en el botón ",
+            "registerTermsButton": "Registrarse",
+            "registerTermsSuffix": ", estás de acuerdo con la oferta pública",
+            "registerButtonLabel": "Registrarse",
+            "loginLinkText": "Ya tengo una cuenta",
+            "loginLinkLabel": "Ingresar"
+        },
+        "forgotPassword": {
+            "titleLine1": "¿Olvidó su",
+            "titleLine2": "contraseña?",
+            "inputLabel": "Ingrese su Email",
+            "emptyEmailValidator": "Por favor ingrese su correo electrónico",
+            "invalidEmailValidator": "Por favor ingrese un correo electrónico válido",
+            "noteFeedback1": "* ",
+            "noteFeedback2": "Le enviaremos un mensaje para configurar o restablecer su nueva contraseña",
+            "buttonSendLabel": "Enviar"
+        },
+        "home": {
+            "greetingMorning": "Buenos días",
+            "greetingAfternoon": "Buenas tardes",
+            "greetingEvening": "Buenas noches",
+            "exploreRelevantProducts": "Explora Nuestros productos relevantes",
+            "trendingProductsBannerProductsInOffer": "Productos en Oferta",
+            "trendingProductsBannerLastDay": "Ultimo Dia ",
+            "trendingProductsBannerButtonViewAll": "View all"
+        },
+        "login": {
+            "welcome": "¡Bienvenido",
+            "welcomeBack": "De nuevo!",
+            "username": "Usuario",
+            "usernameValidation": "Por favor ingrese su nombre de usuario",
+            "password": "Contraseña",
+            "passwordValidationEmpty": "Por favor ingrese su contraseña",
+            "passwordValidationShort": "La contraseña debe tener al menos 6 caracteres",
+            "forgotPassword": "¿Has olvidado tu contraseña?",
+            "loginButtonLabel": "Ingresar",
+            "createAccount": "Crear una cuenta",
+            "register": "Registrarse"
+        },
+        "offer": {
+            "title": "OFERTAS"
+        },
+        "productDetail": {
+            "appBarTitle": "Detalle de producto",
+            "productDetails": "Detalles del producto",
+            "addToCartButton": "añadir al carrito",
+            "similarProducts": "Productos Similares"
+        },
+        "supportContact": {
+            "title": "Ponte en contacto con nosotros",
+            "nameLabel": "Nombre",
+            "nameValidator": "Por favor ingrese su nombre",
+            "emailLabel": "Correo Electrónico",
+            "emailValidatorEmpty": "Por favor ingrese su correo electrónico",
+            "emailValidatorInvalid": "Por favor ingrese un correo electrónico válido",
+            "subjectLabel": "Asunto",
+            "subjectValidator": "Por favor ingrese un asunto",
+            "messageLabel": "Mensaje",
+            "messageValidator": "Por favor ingrese un mensaje",
+            "sendButton": "Enviar",
+            "dialogTitle": "Contacto",
+            "dialogContent": "Se ha enviado un correo con su mensaje",
+            "dialogCloseButton": "Cerrar",
+            "contactInformation": "Información de Contacto",
+            "phone": "Teléfono: +57 300 5524028",
+            "email": "Correo Electrónico: majiar11@gmail.com",
+            "address": "Dirección: Kra 35 # 24 - 133, Barranquilla, Colombia"
+        }
+    },
+    "colors": {
+        "primaryColor": "#FA7189",
+        "secondaryColor": "#4392F9",
+        "darkColor": "#000000",
+        "onPrimary": "#FFFFFF",
+        "onSecondary": "#FFFFFF",
+        "backgroundColor": "#F5F5F5",
+        "surfaceColor": "#FFFFFF",
+        "onSurface": "#000000",
+        "textColor": "#000000",
+        "textPrimary": "#212121",
+        "textEmphasize": "#FA7189",
+        "textHint": "#9E9E9E",
+        "textDisabled": "#BDBDBD",
+        "lightTextColors": "#E6E7E8",
+        "inputFillColor": "#EAEAEA",
+        "errorColor": "#B00020",
+        "onErrorColor": "#FFFFFF",
+        "successColor": "#4CAF50",
+        "successLight": "#80E27E",
+        "successDark": "#087F23",
+        "warningColor": "#FFC107",
+        "warningLight": "#FFD54F",
+        "warningDark": "#FFA000",
+        "infoColor": "#2196F3",
+        "infoLight": "#64B5F6",
+        "infoDark": "#1976D2",
+        "goldColor": "#EDB310"
+    },
+    "typography": {
+        "fonts": {
+            "Corben": "Corben",
+            "Inter": "Inter",
+            "OpenSans": "OpenSans",
+            "Roboto": "Roboto"
+        },
+        "fontSizes": {
+            "extraSmall": 12.0,
+            "small": 16.0,
+            "upperSmall": 18.0,
+            "medium": 20.0,
+            "large": 24.0,
+            "extraLarge": 34.0,
+            "extraExtraLarge": 40.0
+        },
+        "fontWeight": {
+            "light": 300,
+            "regular": 400,
+            "medium": 500,
+            "bold": 700
+        },
+        "lineHeight": {
+            "small": 1.2,
+            "medium": 1.5,
+            "large": 1.8
+        }
+    },
+    "sizes": {
+        "paddingSmall": 8.0,
+        "paddingMedium": 16.0,
+        "paddingLarge": 24.0,
+        "paddingExtraLarge": 32.0,
+        "marginSmall": 8.0,
+        "marginMedium": 16.0,
+        "marginLarge": 24.0,
+        "marginExtraLarge": 32.0,
+        "heightExtraSmall": 32.0,
+        "heightSmall": 40.0,
+        "heightMedium": 80.0,
+        "heightLarge": 120.0,
+        "heightExtraLarge": 160.0,
+        "widthExtraSmall": 32.0,
+        "widthSmall": 40.0,
+        "widthMedium": 80.0,
+        "widthLarge": 120.0,
+        "widthExtraLarge": 160.0,
+        "borderRadiusSmall": 4.0,
+        "borderRadiusMedium": 8.0,
+        "borderRadiusLarge": 16.0,
+        "borderRadiusSmallLarge": 21.0,
+        "borderRadiusExtraLarge": 32.0,
+        "elevationLow": 2.0,
+        "elevationMedium": 6.0,
+        "elevationHigh": 12.0,
+        "elevationExtraHigh": 24.0
+    },
+    "spacing": {
+        "spaceXXS": 3,
+        "spaceXS": 5,
+        "spaceSM": 8,
+        "spaceSL": 16,
+        "spaceMD": 21,
+        "spaceLG": 34,
+        "spaceXL": 55,
+        "spaceXXL": 89
+    }
+}

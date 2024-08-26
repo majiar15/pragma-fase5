@@ -18,15 +18,19 @@ import 'package:fase5/presentation/bloc/auth_bloc.dart';
 import 'package:fase5/presentation/bloc/cart_bloc.dart';
 import 'package:fase5/presentation/bloc/home_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:store_design_system/config.dart';
 
 
-void main(){
+void main() async  {
   AuthRepository authRepository = AuthApi();
   ProductRepository productRepository = ProductApi();
   CategoryRepository categoryRepository = CategoryApi();
   CartRepository cartRepository = CartDataSource();
   DiscountedRepository discountRepository = DiscountDataSource();
 
+  WidgetsFlutterBinding.ensureInitialized();
+  await Config.instance.load('assets/config.json');
+  
   runApp(
     Injector(
       authBloc: AuthBloc(

@@ -6,7 +6,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: b3f826fcb5303cd21b7115ee2361caebb77989e5
+      resolved-ref: "659557ba62f3748a94a4f53ae35685aeca05c052"
       url: "https://github.com/majiar15/pragma-fase3.git"
     source: git
     version: "0.0.1"
@@ -246,7 +246,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "58d1bf47060be01964f8b679d225dff6a5040807"
+      resolved-ref: "3adbc37c30404b5cb3d9567c4da803b76c92568f"
       url: "https://github.com/majiar15/pragama-fase4.git"
     source: git
     version: "0.0.1"
